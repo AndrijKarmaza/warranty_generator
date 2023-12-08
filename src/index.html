@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warranty</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script src="./index.js" type="module"></script>
+  </head>
+  <body>
+    <form name="warranty_form" autocomplete="off" class="warranty_form">
+      <label>
+        Найменування
+        <input type="text" name="name" />
+      </label>
+
+      <label>
+        Серійний номер
+        <input type="text" name="serial_num" />
+      </label>
+
+      <label>
+        Дата продажу
+        <input type="date" name="date" />
+      </label>
+
+      <label>
+        Строк гарантії
+        <input type="number" name="period" min="1" class="input_period" />
+        місяць(ів)
+      </label>
+
+      <label>
+        Покупець
+        <input type="text" name="buyer" />
+      </label>
+
+      <button type="submit" class="submit_btn">Генерувати</button>
+    </form>
+  </body>
+</html>
