@@ -1,9 +1,9 @@
 import { jsPDF } from 'jspdf';
-import { calibri_normal } from '../calibri-normal';
+import { calibriNormal } from '../calibriNormal';
 
 const pdf = new jsPDF();
 
-pdf.addFileToVFS('Calibri-normal.ttf', calibri_normal);
+pdf.addFileToVFS('Calibri-normal.ttf', calibriNormal);
 pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
 pdf.setFont('Calibri');
 
