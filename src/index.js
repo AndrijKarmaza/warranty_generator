@@ -1,8 +1,9 @@
 import { formatDate } from './script/formatDate';
-import { pdfCreator } from './script/pdfCreator';
+import { pdfCreatorFoodBoss } from './script/pdfCreatorFoodBoss';
+import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
 
 const form = document.querySelector('.warranty_form');
-form.addEventListener('submit', onSubmit);
+form.addEventListener('click', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
@@ -16,7 +17,9 @@ function onSubmit(e) {
     buyer: buyer.value,
   };
 
-  pdfCreator(data);
+  e.target.textContent === 'foodboss'
+    ? pdfCreatorFoodBoss(data)
+    : pdfCreatorNumberOne(data);
 
   form.reset();
 }
