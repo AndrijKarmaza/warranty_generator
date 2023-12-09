@@ -3,11 +3,12 @@ import { pdfCreatorFoodBoss } from './script/pdfCreatorFoodBoss';
 import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
 
 const form = document.querySelector('.warranty_form');
-form.addEventListener('click', onSubmit);
+form.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  const { name, serial_num, date, period, buyer } = e.currentTarget.elements;
+  const { company, name, serial_num, date, period, buyer } =
+    e.currentTarget.elements;
 
   const data = {
     name: name.value,
@@ -17,9 +18,7 @@ function onSubmit(e) {
     buyer: buyer.value,
   };
 
-  e.target.textContent === 'foodboss'
-    ? pdfCreatorFoodBoss(data)
-    : pdfCreatorNumberOne(data);
+  company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
 
   form.reset();
 }

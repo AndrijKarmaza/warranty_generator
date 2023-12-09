@@ -25,7 +25,8 @@ label {
   align-items: center;
 }
 
-input {
+input,
+select {
   font-size: 20px;
   width: 300px;
   padding: 4px 10px;
@@ -36,7 +37,9 @@ input {
 }
 
 input:active,
-input:focus {
+select:active,
+input:focus,
+select:focus {
   border: 1px solid #357a38;
   outline: none;
 }
@@ -44,12 +47,6 @@ input:focus {
 .input_period {
   width: 200px;
   margin-left: 65px;
-}
-
-.btn_container {
-  display: flex;
-  width: 500px;
-  justify-content: space-evenly;
 }
 
 .submit_btn {
@@ -69,25 +66,5 @@ input:focus {
 .submit_btn:hover {
   color: white;
   background-color: #ff3d00;
-  transition: all 0.2s ease-in-out;
-}
-
-.submit_btn_nr {
-  display: block;
-  padding: 8px 16px;
-  margin-top: 16px;
-  font-size: 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  border: 2px solid #357a38;
-  background-color: white;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-
-.submit_btn_nr:hover {
-  color: white;
-  background-color: #357a38;
   transition: all 0.2s ease-in-out;
 }

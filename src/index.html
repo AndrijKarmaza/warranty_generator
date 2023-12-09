@@ -10,6 +10,14 @@
   <body>
     <form name="warranty_form" autocomplete="on" class="warranty_form">
       <label>
+        Оберіть компанію
+        <select name="company">
+          <option value="fb">Food Boss</option>
+          <option value="nr">Number One</option>
+        </select>
+      </label>
+
+      <label>
         Найменування
         <input type="text" name="name" />
       </label>
@@ -35,10 +43,7 @@
         <input type="text" name="buyer" />
       </label>
 
-      <div class="btn_container">
-        <button type="submit" class="submit_btn">foodboss</button>
-        <button type="submit" class="submit_btn_nr">number one</button>
-      </div>
+      <button type="submit" class="submit_btn">скачати гарантію</button>
     </form>
   </body>
 </html>
