@@ -124,9 +124,5 @@ export const pdfCreatorNumberOne = data => {
   pdf.line(160, 185, 220, 185);
   pdf.text('(П.І.Б.) підпис', 230, 185);
 
-  stamp.onload = () => {
-    pdf.addImage(stamp, 'png', 100, 100, 40, 40);
-  };
-
   pdf.save(`${data.name}_${data.buyer}`);
 };
