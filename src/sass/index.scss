@@ -1,24 +1,10 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-@font-face {
-  font-family: 'Calibri';
-  font-display: swap;
-  src: url('../fonts/calibri.ttf');
-  src: local('./fonts/Calibri normal'), local('Calibri normal'),
-    url('../fonts/calibri.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.none {
-  visibility: hidden;
-}
 
 .warranty_form {
   display: flex;
   margin: 24px auto;
   flex-direction: column;
   align-items: center;
-  font-family: 'Calibri';
   font-size: 20px;
 }
 
