@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+.container {
+  padding: 0 10px;
+}
+
 .warranty_form {
   display: flex;
   margin: 24px auto;
@@ -18,11 +22,34 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 520px) {
+  .warranty_form {
+    margin-top: 4px;
+  }
+}
+
 label {
   display: flex;
   width: 500px;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+  label {
+    max-width: 320px;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .label_period {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 input,
@@ -36,6 +63,13 @@ select {
   text-align: center;
 }
 
+@media screen and (max-width: 520px) {
+  input,
+  select {
+    margin-top: 2px;
+  }
+}
+
 input:active,
 select:active,
 input:focus,
@@ -47,6 +81,13 @@ select:focus {
 .input_period {
   width: 200px;
   margin-left: 65px;
+}
+
+@media screen and (max-width: 520px) {
+  .input_period {
+    width: 80px;
+    margin-left: 0;
+  }
 }
 
 .submit_btn {
