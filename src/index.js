@@ -3,6 +3,11 @@ import { pdfCreatorFoodBoss } from './script/pdfCreatorFoodBoss';
 import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
 
 const form = document.querySelector('.warranty_form');
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  form.classList.remove('none');
+});
+
 form.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
