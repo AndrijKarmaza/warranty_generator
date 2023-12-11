@@ -12,7 +12,7 @@ pdf.setFont('Calibri');
 export const pdfCreatorNumberOne = data => {
   pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
-  pdf.setFontSize(18).text('FOODBOSS', 10, 10);
+  pdf.setFontSize(18).text('NUMBER ONE', 10, 10);
   pdf.setFontSize(11).text('ФОП Александрочкіна Ольга Борисівна', 10, 18);
   pdf.text('Код за ДРФО 2368511828', 10, 23);
   pdf.text(
