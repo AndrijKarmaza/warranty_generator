@@ -95,3 +95,23 @@ select:focus {
   background-color: #ff3d00;
   transition: all 0.2s ease-in-out;
 }
+
+.clear_btn {
+  display: block;
+  padding: 8px 16px;
+  margin-top: 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: 2px solid #357a38;
+  background-color: white;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.clear_btn:hover {
+  color: white;
+  background-color: #357a38;
+  transition: all 0.2s ease-in-out;
+}

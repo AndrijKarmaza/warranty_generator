@@ -5,6 +5,9 @@ import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
 const form = document.querySelector('.warranty_form');
 form.addEventListener('submit', onSubmit);
 
+const clearBtn = document.querySelector('.clear_btn');
+clearBtn.addEventListener('click', onClear);
+
 function onSubmit(e) {
   e.preventDefault();
   const { company, name, serial_num, date, period, buyer } =
@@ -19,6 +22,8 @@ function onSubmit(e) {
   };
 
   company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
+}
 
+function onClear() {
   form.reset();
 }
