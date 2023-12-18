@@ -6,7 +6,7 @@ const form = document.querySelector('.warranty_form');
 form.addEventListener('submit', onSubmit);
 
 const clearBtn = document.querySelector('.clear_btn');
-clearBtn.addEventListener('click', onClear);
+clearBtn.addEventListener('click', () => form.reset());
 
 function onSubmit(e) {
   e.preventDefault();
@@ -22,8 +22,4 @@ function onSubmit(e) {
   };
 
   company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
-}
-
-function onClear() {
-  form.reset();
 }
