@@ -14,11 +14,11 @@ function onSubmit(e) {
     e.currentTarget.elements;
 
   const data = {
-    name: name.value,
-    serial_num: serial_num.value,
+    name: name.value.trim(),
+    serial_num: serial_num.value.trim(),
     date: formatDate(date.value),
     period: period.value,
-    buyer: buyer.value,
+    buyer: buyer.value.trim(),
   };
 
   company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
