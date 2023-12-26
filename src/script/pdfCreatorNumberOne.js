@@ -3,13 +3,13 @@ import { calibriNormal } from '../calibriNormal';
 
 const stamp = require('../images/numberOne_stamp.png');
 
-const pdf = new jsPDF('l');
-
-pdf.addFileToVFS('Calibri-normal.ttf', calibriNormal);
-pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
-pdf.setFont('Calibri');
-
 export const pdfCreatorNumberOne = data => {
+  const pdf = new jsPDF('l');
+
+  pdf.addFileToVFS('Calibri-normal.ttf', calibriNormal);
+  pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
+  pdf.setFont('Calibri');
+
   pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
   pdf.setFontSize(18).text('NUMBER ONE', 10, 10);

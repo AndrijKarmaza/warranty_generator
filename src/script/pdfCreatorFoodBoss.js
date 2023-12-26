@@ -3,13 +3,13 @@ import { calibriNormal } from '../calibriNormal';
 
 const stamp = require('../images/foodboss_stamp.png');
 
-const pdf = new jsPDF('l');
-
-pdf.addFileToVFS('Calibri-normal.ttf', calibriNormal);
-pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
-pdf.setFont('Calibri');
-
 export const pdfCreatorFoodBoss = data => {
+  const pdf = new jsPDF('l');
+
+  pdf.addFileToVFS('Calibri-normal.ttf', calibriNormal);
+  pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
+  pdf.setFont('Calibri');
+
   pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
   pdf.setFontSize(18).text('FOODBOSS', 10, 10);
