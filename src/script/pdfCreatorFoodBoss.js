@@ -120,5 +120,5 @@ export const pdfCreatorFoodBoss = data => {
   pdf.line(160, 185, 220, 185);
   pdf.text('(П.І.Б.) підпис', 230, 185);
 
-  pdf.save(`${data.name}_${data.buyer}`);
+  pdf.save(`Гарантія_${data.name}_${data.buyer}`);
 };
