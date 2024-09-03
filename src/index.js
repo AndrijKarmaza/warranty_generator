@@ -1,6 +1,7 @@
 import { formatDate } from './script/formatDate';
 import { pdfCreatorFoodBoss } from './script/pdfCreatorFoodBoss';
 import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
+import { pdfCreatorDad } from './script/pdfCreatorDad';
 
 const form = document.querySelector('.warranty_form');
 form.addEventListener('submit', onSubmit);
@@ -21,5 +22,13 @@ function onSubmit(e) {
     buyer: buyer.value.trim(),
   };
 
-  company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
+  if (company.value === 'fb') {
+    pdfCreatorFoodBoss(data);
+  } else if (company.value === 'nr') {
+    pdfCreatorNumberOne(data);
+  } else {
+    pdfCreatorDad(data);
+  }
+
+  // company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
 }
