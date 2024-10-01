@@ -6,8 +6,16 @@ import { pdfCreatorNumberOne } from './script/pdfCreatorNumberOne';
 const form = document.querySelector('.warranty_form');
 form.addEventListener('submit', onSubmit);
 
+const openModalBtn = document.querySelector('.open_modal');
+openModalBtn.addEventListener('click', () => popup.classList.toggle('open'));
+
+const closeBtn = document.querySelector('.close_btn');
+closeBtn.addEventListener('click', () => popup.classList.toggle('open'));
+
 const clearBtn = document.querySelector('.clear_btn');
-clearBtn.addEventListener('click', () => form.reset());
+clearBtn.addEventListener('click', onClearBtn);
+
+const popup = document.querySelector('.popup');
 
 function onSubmit(e) {
   e.preventDefault();
@@ -31,4 +39,9 @@ function onSubmit(e) {
   // }
 
   company.value === 'fb' ? pdfCreatorFoodBoss(data) : pdfCreatorNumberOne(data);
+}
+
+function onClearBtn() {
+  popup.classList.toggle('open');
+  form.reset();
 }
