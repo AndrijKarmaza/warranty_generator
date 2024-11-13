@@ -12,6 +12,9 @@ export const pdfCreatorNumberOne = data => {
 
   pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
+  pdf.setFontSize(11).text('тел. +380 (95) 387-45-31', 192, 10);
+  pdf.text('+380 (98) 225-80-37 (Viber, Telegram, WhatsApp)', 200, 15);
+
   pdf.setFontSize(18).text('NUMBER ONE', 10, 10);
   pdf.setFontSize(11).text('ФОП Александрочкіна Ольга Борисівна', 10, 18);
   pdf.text('Код за ДРФО 2368511828', 10, 23);
