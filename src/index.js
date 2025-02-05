@@ -19,11 +19,12 @@ const popup = document.querySelector('.popup');
 
 function onSubmit(e) {
   e.preventDefault();
-  const { company, name, serial_num, date, period, buyer } =
+  const { company, stampCheck, name, serial_num, date, period, buyer } =
     e.currentTarget.elements;
 
   const data = {
     name: name.value.trim(),
+    stampCheck: stampCheck.checked,
     serial_num: serial_num.value.trim(),
     date: formatDate(date.value),
     period: period.value,

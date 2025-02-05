@@ -10,7 +10,7 @@ export const pdfCreatorFoodBoss = data => {
   pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
   pdf.setFont('Calibri');
 
-  pdf.addImage(stamp, 'png', 220, 30, 40, 40);
+  data.stampCheck && pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
   pdf.setFontSize(18).text('FOODBOSS', 10, 10);
   pdf.setFontSize(11).text('ФОП КИРМИЗИ ПОЛІНА ОЛЕКСАНДРІВНА', 10, 18);

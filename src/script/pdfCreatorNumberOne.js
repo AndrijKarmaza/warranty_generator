@@ -10,7 +10,7 @@ export const pdfCreatorNumberOne = data => {
   pdf.addFont('Calibri-normal.ttf', 'Calibri', 'normal');
   pdf.setFont('Calibri');
 
-  pdf.addImage(stamp, 'png', 220, 30, 40, 40);
+  data.stampCheck && pdf.addImage(stamp, 'png', 220, 30, 40, 40);
 
   pdf.setFontSize(11).text('тел. +380 (95) 387-45-31', 192, 10);
   pdf.text('+380 (98) 225-80-37 (Viber, Telegram, WhatsApp)', 200, 15);
